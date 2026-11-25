@@ -1,0 +1,9 @@
+# Datensicherungen enthalten Mieterdaten – niemals einchecken
+nebenkosten-sicherung-*.json
+*.sicherung.json
+/private/
+
+# Betriebssystem / Editor
+Thumbs.db
+.DS_Store
+.vscode/
