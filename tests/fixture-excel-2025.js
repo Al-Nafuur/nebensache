@@ -1,3 +1,5 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Sollwerte nach der Logik der Excel-Vorlage (Python-Nachbildung, gegen LibreOffice geprüft). Anonymisiert.
 export const objekt = {
  "id": "o1",

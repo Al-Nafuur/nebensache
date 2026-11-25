@@ -1,3 +1,5 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Datenmodell: Vorlagen, Fabrikfunktionen, Übernahme aus dem Vorjahr, Demo-Daten.
 import { uid } from './format.js';
 
@@ -10,7 +12,7 @@ export const SCHLUESSEL = {
   verbrauch: { kurz: 'Verbrauch', lang: 'Verbrauch laut Zähler' },
 };
 
-/** Betriebskostenarten nach § 2 BetrKV (Bezeichnungen wie in der bisherigen Excel-Vorlage). */
+/** Betriebskostenarten nach § 2 Nr. 1–17 BetrKV (Bezeichnungen gekürzt). */
 export const KOSTENARTEN = [
   ['Grundsteuer', 'flaeche'],
   ['Wasserkosten', 'verbrauch'],
@@ -32,9 +34,9 @@ export const KOSTENARTEN = [
 ];
 
 export const DEFAULT_HINWEIS =
-  'Bitte überweisen Sie eine Nachzahlung innerhalb von 4 Wochen ab Abrechnungsdatum.\n' +
-  'Ein Guthaben erstatten wir Ihnen innerhalb von 4 Wochen.\n' +
-  'Bitte ändern Sie ggf. Ihren Dauerauftrag bei Ihrer Bank oder Sparkasse. Danke!';
+  'Eine Nachzahlung überweisen Sie bitte innerhalb von vier Wochen nach dem Abrechnungsdatum.\n' +
+  'Ein Guthaben zahlen wir Ihnen im selben Zeitraum zurück.\n' +
+  'Ändert sich Ihre monatliche Vorauszahlung, passen Sie bitte Ihren Dauerauftrag an.';
 
 export function neuesObjekt(vorlage = null) {
   return {
@@ -117,7 +119,7 @@ export function leereDaten() {
 
 /** Eingelesene Daten prüfen und auf das aktuelle Schema bringen. Wirft bei ungültigen Daten. */
 export function normalisiere(d) {
-  if (!d || typeof d !== 'object' || !Array.isArray(d.objekte)) throw new Error('Keine gültige Nebenkosten-Datei.');
+  if (!d || typeof d !== 'object' || !Array.isArray(d.objekte)) throw new Error('Keine gültige Sicherungsdatei von Nebensache.');
   const okLogo = s => typeof s === 'string' && /^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/=]+$/.test(s);
   for (const o of d.objekte) {
     o.id ||= uid();

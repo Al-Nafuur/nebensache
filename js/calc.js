@@ -1,3 +1,5 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Berechnung der Betriebskostenabrechnung. Reine Funktionen, kein DOM.
 import { tage, overlap, isISO, r2, deDate, num } from './format.js';
 import { SCHLUESSEL } from './model.js';

@@ -1,12 +1,15 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Lokale Speicherung im Browser (localStorage) + Export/Import als JSON-Datei.
 import { leereDaten, normalisiere } from './model.js';
 
-const KEY = 'nebenkosten.daten.v1';
+const KEY = 'nebensache.daten.v1';
+const KEY_VORABVERSION = 'nebenkosten.daten.v1'; // Speicherort der Vorabversion vor der Umbenennung
 let speicherFehler = null;
 
 export function laden() {
   try {
-    const raw = localStorage.getItem(KEY);
+    const raw = localStorage.getItem(KEY) ?? localStorage.getItem(KEY_VORABVERSION);
     return raw ? normalisiere(JSON.parse(raw)) : leereDaten();
   } catch (e) {
     speicherFehler = e;
@@ -47,7 +50,7 @@ export function exportDatei(daten) {
   const blob = new Blob([JSON.stringify({ ...rest, exportiert: new Date().toISOString() }, null, 2)], { type: 'application/json' });
   const a = document.createElement('a');
   const d = new Date();
-  a.download = `nebenkosten-sicherung-${d.toISOString().slice(0, 10)}.json`;
+  a.download = `nebensache-sicherung-${d.toISOString().slice(0, 10)}.json`;
   a.href = URL.createObjectURL(blob);
   document.body.appendChild(a);
   a.click();

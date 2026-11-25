@@ -1,7 +1,9 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Service Worker: App-Dateien für den Offline-Betrieb zwischenspeichern.
 // Bei jeder neuen Version VERSION erhöhen (und APP_VERSION in js/app.js).
 const VERSION = '1.0.0';
-const CACHE = `nebenkosten-${VERSION}`;
+const CACHE = `nebensache-${VERSION}`;
 const DATEIEN = [
   './',
   './index.html',
@@ -27,7 +29,7 @@ self.addEventListener('install', e => {
 self.addEventListener('activate', e => {
   e.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k.startsWith('nebenkosten-') && k !== CACHE).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => k.startsWith('nebensache-') && k !== CACHE).map(k => caches.delete(k))))
       .then(() => self.clients.claim()),
   );
 });

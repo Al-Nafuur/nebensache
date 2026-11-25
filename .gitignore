@@ -1,4 +1,5 @@
 # Datensicherungen enthalten Mieterdaten – niemals einchecken
+nebensache-sicherung-*.json
 nebenkosten-sicherung-*.json
 *.sicherung.json
 /private/

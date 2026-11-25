@@ -1,4 +1,6 @@
-// Oberfläche der Nebenkosten-App.
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Oberfläche der App.
 import * as F from './format.js';
 import * as M from './model.js';
 import { berechne } from './calc.js';
@@ -416,10 +418,24 @@ function viewDaten() {
     <p class="leise">Fügt ein erfundenes Beispielobjekt hinzu, um die App auszuprobieren.</p>
     <button data-a="demo">Beispielobjekt hinzufügen</button>
   </section>
+  <section class="karte">
+    <h2>Über Nebensache</h2>
+    <p class="leise">Version ${APP_VERSION} · © 2026 Wolfgang Stubig</p>
+    <p class="leise klein">Freie Software: Sie dürfen die App nach der
+      <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">GNU General Public License Version 3</a>
+      (oder einer späteren Version) nutzen, weitergeben und verändern. Sie wird ohne jede Gewährleistung bereitgestellt.
+      ${quellcodeUrl() ? `<a href="${esc(quellcodeUrl())}" target="_blank" rel="noopener">Quellcode</a>` : ''}</p>
+  </section>
   <section class="karte gefahr-zone">
     <button class="gefahr" data-a="alles-loeschen">Alle Daten in diesem Browser löschen</button>
-    <p class="leise klein">Nebenkosten-App Version ${APP_VERSION}</p>
   </section>`;
+}
+
+// Auf GitHub Pages (https://<name>.github.io/<repository>/) auf das zugehörige Repository verweisen.
+function quellcodeUrl() {
+  const m = location.hostname.match(/^([a-z0-9-]+)\.github\.io$/i);
+  const repo = location.pathname.split('/').filter(Boolean)[0];
+  return m && repo ? `https://github.com/${m[1]}/${repo}` : null;
 }
 
 // ------------------------------------------------------------------ Werte setzen

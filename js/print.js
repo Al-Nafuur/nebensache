@@ -1,3 +1,5 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Anschreiben (Einzelabrechnung) je Mieter als HTML für Vorschau und Druck.
 import { esc, eur, deDate, todayISO, num } from './format.js';
 import { SCHLUESSEL } from './model.js';

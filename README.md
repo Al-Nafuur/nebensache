@@ -1,6 +1,7 @@
-# Nebenkosten – Betriebskostenabrechnung im Browser
+# Nebensache – Nebenkostenabrechnung im Browser
 
-Eine kostenlose Web-App (PWA) für private Vermieter: Kosten erfassen, Wasserzähler ablesen,
+Damit die Nebenkostenabrechnung zur Nebensache wird: eine kostenlose Web-App (PWA) für
+private Vermieter. Betriebskosten erfassen, Wasserzähler ablesen,
 Anteile berechnen und die Abrechnungen an die Mieter drucken oder als PDF speichern –
 für beliebig viele Häuser und Jahre.
 
@@ -41,6 +42,32 @@ die Daten auf einem anderen Gerät wiederherstellen.
   verteilt werden – dafür eine eigene Zählerart anlegen.
 
 Die App ersetzt keine Rechtsberatung. Prüfen Sie Ihre Abrechnung vor dem Versand.
+
+## Herkunft und Dank
+
+Vorbild für diese App ist die kostenlose Excel-Arbeitsmappe **„Nebenkostenabrechnung“ von
+Dieter Lorenz** (© 2007–2023, [www.lorenz24.de](http://www.lorenz24.de)). Mit ihr haben wir unsere
+Abrechnungen seit 2016 erstellt; Rechenweg und Umlageschlüssel der App orientieren sich daran.
+Vielen Dank für diese Arbeit!
+
+Die App ist eine eigenständige Neuentwicklung. Sie enthält keine Formeln, keinen VBA-Code und
+keine Texte aus der Arbeitsmappe und steht in keiner Verbindung zu deren Autor. Fragen und
+Fehlermeldungen zur App bitte nur hier im Repository stellen.
+
+## Lizenz
+
+Copyright © 2026 Wolfgang Stubig
+
+Nebensache ist freie Software: Sie können sie unter den Bedingungen der GNU General Public
+License, wie von der Free Software Foundation veröffentlicht, weitergeben und/oder verändern,
+entweder gemäß Version 3 der Lizenz oder (nach Ihrer Wahl) jeder späteren Version.
+
+Die Veröffentlichung erfolgt in der Hoffnung, dass die App nützlich ist, aber **ohne jede
+Gewährleistung** – sogar ohne die implizite Gewährleistung der Marktreife oder der Eignung für
+einen bestimmten Zweck. Den vollständigen Lizenztext enthält die Datei [LICENSE](LICENSE).
+
+Kurz gesagt: Jeder darf die App kostenlos nutzen, kopieren und verändern. Wer eine veränderte
+Fassung weitergibt oder veröffentlicht, muss deren Quellcode ebenfalls unter der GPL offenlegen.
 
 ## Entwicklung
 

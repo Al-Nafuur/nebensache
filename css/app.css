@@ -1,3 +1,5 @@
+/* Nebensache – Copyright (C) 2026 Wolfgang Stubig
+   SPDX-License-Identifier: GPL-3.0-or-later */
 :root {
   --bg: #f4f6f7;
   --card: #ffffff;
@@ -40,12 +42,15 @@ body {
 }
 h2 { font-size: 1.1rem; margin: 0 0 .6rem; }
 p { margin: .4rem 0; }
+a { color: var(--accent); }
 button, .knopf, input, select, textarea { font: inherit; color: inherit; }
 
 /* ---------- Kopf & Navigation */
 .kopf { position: sticky; top: 0; z-index: 10; background: var(--card); border-bottom: 1px solid var(--line); padding-top: env(safe-area-inset-top); }
 .kopf-zeile { display: flex; align-items: center; gap: 12px; padding: 8px 16px; flex-wrap: wrap; max-width: 1100px; margin: 0 auto; }
 .marke { display: flex; align-items: center; gap: 8px; font-weight: 650; font-size: 1.05rem; margin-right: auto; }
+.marke-text { display: flex; flex-direction: column; line-height: 1.15; }
+.marke-text small { font-size: 11px; font-weight: 400; color: var(--muted); letter-spacing: .01em; }
 .kopf-wahl { display: flex; gap: 8px; flex: 0 1 380px; min-width: 0; }
 .kopf-wahl select { flex: 1 1 0; min-width: 0; width: auto; }
 .kopf-wahl select#wahl-jahr { flex: 0 0 96px; }

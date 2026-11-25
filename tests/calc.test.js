@@ -1,3 +1,5 @@
+// Nebensache – Copyright (C) 2026 Wolfgang Stubig
+// SPDX-License-Identifier: GPL-3.0-or-later
 // Tests für Berechnung und Datenmodell. Ausführen: tests/index.html im Browser öffnen (über einen Webserver).
 import { berechne } from '../js/calc.js';
 import { jahrAusVorjahr, normalisiere, demoObjekt, neuesJahr } from '../js/model.js';

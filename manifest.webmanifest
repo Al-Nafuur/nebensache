@@ -1,7 +1,7 @@
 {
-  "name": "Nebenkosten – Betriebskostenabrechnung",
-  "short_name": "Nebenkosten",
-  "description": "Betriebskostenabrechnung für Vermieter. Funktioniert offline, alle Daten bleiben auf Ihrem Gerät.",
+  "name": "Nebensache – Nebenkostenabrechnung",
+  "short_name": "Nebensache",
+  "description": "Nebenkostenabrechnung für private Vermieter. Funktioniert offline, alle Daten bleiben auf Ihrem Gerät.",
   "lang": "de",
   "start_url": "./",
   "scope": "./",
